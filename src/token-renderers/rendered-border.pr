@@ -35,7 +35,7 @@ Xpx solid (rendered-color.pr);
 *}
 {[ inject "reference-wrapper" context buildReferenceMeta("Border", context) ]}
 {
-  color: {[ inject "rendered-color" context context.color /]},
-  width: {[ inject "rendered-measure" context context.width /]},
+  color: '{[ inject "rendered-color" context context.color /]}',
+  width: '{[ inject "rendered-measure" context context.width /]}',
   position: "{{ context.position }}",
 }{[/]}

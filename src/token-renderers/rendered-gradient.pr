@@ -46,7 +46,7 @@ linear-gradient(
    stops: [
    {[ for stop in context.stops ]}
     {
-      color: {[ inject "rendered-color" context stop.color /]},
+      color: '{[ inject "rendered-color" context stop.color /]}',
       position: {{ stop.position }}
     },
     {[/]}

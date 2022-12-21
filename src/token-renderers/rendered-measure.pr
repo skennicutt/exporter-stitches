@@ -25,4 +25,4 @@ Note: Value is passed as `context` property because it is injected
   {[ set unit = "%"/]}
   {[ case "Ems"]}
   {[ set unit = "em"/]}
-{[/]}"{{ context.measure }}{{ unit }}"{[/]}
+{[/]}{{ context.measure }}{{ unit }}{[/]}
