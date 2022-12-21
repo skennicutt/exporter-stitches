@@ -19,7 +19,6 @@ import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}'
 export const {{ behavior.varName }} = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-token-var" context token /]},
-
+  {[ inject "rendered-token-var" context token /]}
 {[/]}
 }
