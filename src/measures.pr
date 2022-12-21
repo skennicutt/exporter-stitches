@@ -14,6 +14,7 @@ and their value rendered using `rendered-measure` blueprint
 export const {{ behavior.varName }} = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-{[ inject "rendered-token-object-val" context token /]}
+  {[ inject "rendered-token-var" context token /]},
+
 {[/]}
 }
