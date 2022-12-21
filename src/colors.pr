@@ -13,7 +13,7 @@ and their value rendered using `rendered-color` blueprint
 
 export const {{ behavior.varName }} = {
 {[ for token in tokens ]}
-{[ inject "rendered-token-object-val" context token /]}
+  {[ inject "rendered-token-object-val" context token /]}
 
 {[/]}
 }
