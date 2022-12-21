@@ -39,5 +39,5 @@ Note: Value is passed as `context` property because it is injected
 
 *}
 {[ inject "reference-wrapper" context buildReferenceMeta("Radius", context) ]}
-'{[ inject "rendered-measure" context context.radius /]}'
+{[ inject "rendered-measure" context context.radius /]}
 {[/]}

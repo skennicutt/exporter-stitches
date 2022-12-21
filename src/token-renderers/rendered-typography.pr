@@ -65,8 +65,8 @@ Rendered as:
   {[ if ds.isFontItalic(context.font) ]}
     {[ set fontStyle = "italic" /]}
   {[/]}
-  fontFamily: "{{ context.font.family }}",
-  fontStyle: "{{ fontStyle }}",
+  fontFamily: '{{ context.font.family }}',
+  fontStyle: '{{ fontStyle }}',
   fontWeight: {{ ds.fontWeight(context.font) }},
   fontSize: '{[ inject "rendered-measure" context context.fontSize /]}',
   {[ if context.lineHeight ]}

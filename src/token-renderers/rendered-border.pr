@@ -37,5 +37,5 @@ Xpx solid (rendered-color.pr);
 {
   color: '{[ inject "rendered-color" context context.color /]}',
   width: '{[ inject "rendered-measure" context context.width /]}',
-  position: "{{ context.position }}",
+  position: '{{ context.position }}',
 }{[/]}
