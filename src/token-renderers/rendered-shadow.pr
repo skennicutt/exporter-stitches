@@ -49,10 +49,5 @@ Xpx Xpx Xpx [Rendered Color];
 
 *}
 {[ inject "reference-wrapper" context buildReferenceMeta("Shadow", context) ]}
-{  
-  offsetX: {[ inject "rendered-measure" context context.x /]},
-  offsetY: {[ inject "rendered-measure" context context.y /]},
-  radius: {[ inject "rendered-measure" context context.radius /]},
-  spread: {[ inject "rendered-measure" context context.spread /]},
-  color: {[ inject "rendered-color" context context.color /]},
-}{[/]}
+{[ inject "rendered-measure" context context.x /]}, {[ inject "rendered-measure" context context.y /]}, {[ inject "rendered-measure" context context.radius /]}, {[ inject "rendered-measure" context context.spread /]}, {[ inject "rendered-color" context context.color /]}
+{[/]}
