@@ -15,5 +15,6 @@ export const {{ behavior.varName }} = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
   {[ inject "rendered-token-object-val" context token /]}
+
 {[/]}
 }
