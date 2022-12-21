@@ -18,10 +18,9 @@ import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}'
 {[ let brand = ds.currentBrand() /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
 export const {{ behavior.varName }} = {
-export const {{ behavior.varName }} = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-token-object-val" context token /]}
+{[ inject "rendered-token-object-val" context token /]}
 
 {[/]}
 }
