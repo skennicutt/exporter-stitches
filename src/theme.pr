@@ -1,4 +1,4 @@
-{[ const types = ["color","border","gradient","measure","shadow","radius","typography"] /]}
+{[ const types = ["color","border-width","gradient","measure","shadow","radius","typography"] /]}
 
 {[ for type in types ]}
 {[ const behavior = getBehavior(type) /]}
