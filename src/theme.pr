@@ -1,9 +1,10 @@
-{[ const types = ["color","border-width","gradient","measure","shadow","radius","typography"] /]}
+{[ const types = ["color","border","gradient","measure","shadow","radius"] /]}
 
 {[ for type in types ]}
 {[ const behavior = getBehavior(type) /]}
 import { {{ behavior.varName }} } from './{{ behavior.fileName }}';
 {[/]}
+import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from './typography'
 
 export const theme = {
     {[ for type in types ]}

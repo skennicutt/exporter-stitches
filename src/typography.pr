@@ -29,7 +29,7 @@ export const {{ behavior.varName }} = {
 export const fonts = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{{ token.value.font.family }}',,
+  {[ inject "rendered-name" context token /]}: '{{ token.value.font.family }}',
 
 {[/]}
 }
