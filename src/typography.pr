@@ -18,11 +18,18 @@ import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}'
 {[ inject "rendered-token-var" context token /]}    
 {[/]}
 
+export const {{ behavior.varName }} = {
+{[ for token in tokens ]}
+  {[ inject "rendered-description" context token /]}
+  {[ inject "rendered-name" context token /]},
+
+{[/]}
+
 
 export const fonts = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{{ context.font.family }}',,
+  {[ inject "rendered-name" context token /]}: '{{ context.value.font.family }}',,
 
 {[/]}
 }
@@ -30,7 +37,7 @@ export const fonts = {
 export const fontSizes = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.fontSize /]}',
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.fontSize /]}',
 
 {[/]}
 }
@@ -38,7 +45,7 @@ export const fontSizes = {
 export const fontWeights = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(context.font) }},
+  {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(context.value.font) }},
 
 {[/]}
 }
@@ -47,7 +54,7 @@ export const lineHeights = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
   {[ if context.lineHeight ]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.lineHeight /]}',
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.lineHeight /]}',
   {[/]}
 {[/]}
 }
@@ -55,7 +62,7 @@ export const lineHeights = {
 export const letterSpacings = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.letterSpacing /]}',
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.letterSpacing /]}',
 
 {[/]}
 }
