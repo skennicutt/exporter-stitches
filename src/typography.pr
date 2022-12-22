@@ -19,10 +19,46 @@ import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}'
 {[/]}
 
 
-export const {{ behavior.varName }} = {
+export const fonts = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]},
+  {[ inject "rendered-name" context token /]}: '{{ context.font.family }}',,
 
 {[/]}
 }
+
+export const fontSizes = {
+{[ for token in tokens ]}
+  {[ inject "rendered-description" context token /]}
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.fontSize /]}',
+
+{[/]}
+}
+
+export const fontWeights = {
+{[ for token in tokens ]}
+  {[ inject "rendered-description" context token /]}
+  {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(context.font) }},
+
+{[/]}
+}
+
+export const lineHeights = {
+{[ for token in tokens ]}
+  {[ inject "rendered-description" context token /]}
+  {[ if context.lineHeight ]}
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.lineHeight /]}',
+  {[/]}
+{[/]}
+}
+
+export const letterSpacings = {
+{[ for token in tokens ]}
+  {[ inject "rendered-description" context token /]}
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.letterSpacing /]}',
+
+{[/]}
+}
+
+
+
