@@ -1,11 +1,11 @@
 {
     "id": "io.supernova.stitches",
-    "name": "React",
+    "name": "Stitches",
     "description": "Stitches token and style exporter",
     "source_dir": "src",
     "version": "1.2.2",
     "tags": [
-        "React",
+        "Stitches",
         "Tokens",
         "Styles"
     ],
