@@ -5,8 +5,8 @@
             "write_to": "colors.ts"
         },
         {
-            "invoke": "borders.pr",
-            "write_to": "borders.ts"
+            "invoke": "border-widths.pr",
+            "write_to": "border-widths.ts"
         },
         {
             "invoke": "gradients.pr",
