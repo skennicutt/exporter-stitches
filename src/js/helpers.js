@@ -47,9 +47,9 @@ const BEHAVIOR = {
     tokenPrefix: "",
   },
   border: {
-    fileName: "borders", // this should be somehow synced with output.json contents
-    varName: "Borders",
-    themeProperty: "borders",
+    fileName: "border-widths", // this should be somehow synced with output.json contents
+    varName: "BorderWidths",
+    themeProperty: "border-widths",
     tokenPrefix: "",
   },
   gradient: {
