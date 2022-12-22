@@ -5,7 +5,7 @@ Tokens are named by their group path and then name,
 and their value rendered using `rendered-border` blueprint
 
 *}
-{[ global CURRENT_TYPE = "Border" /]}
+{[ global CURRENT_TYPE = "BorderWidths" /]}
 {[ const colorBehavior = getBehavior("color") /]}
 {[ const measureBehavior = getBehavior("measure") /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
