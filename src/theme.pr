@@ -11,4 +11,9 @@ export const theme = {
     {[ const behavior = getBehavior(type) /]}
     {{ behavior.themeProperty }}: {{ behavior.varName }},
     {[/]}
+    fonts,
+    fontSizes,
+    fontWeights,
+    lineHeights,
+    letterSpacings,
 };
