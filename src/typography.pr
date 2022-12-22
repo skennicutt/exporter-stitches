@@ -29,7 +29,7 @@ export const {{ behavior.varName }} = {
 export const fonts = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{{ context.value.font.family }}',,
+  {[ inject "rendered-name" context token /]}: '{{ token.value.font.family }}',,
 
 {[/]}
 }
@@ -37,7 +37,7 @@ export const fonts = {
 export const fontSizes = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.fontSize /]}',
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.fontSize /]}',
 
 {[/]}
 }
@@ -45,7 +45,7 @@ export const fontSizes = {
 export const fontWeights = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(context.value.font) }},
+  {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(token.value.font) }},
 
 {[/]}
 }
@@ -53,8 +53,8 @@ export const fontWeights = {
 export const lineHeights = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ if context.lineHeight ]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.lineHeight /]}',
+  {[ if token.value.lineHeight ]}
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.lineHeight /]}',
   {[/]}
 {[/]}
 }
@@ -62,7 +62,7 @@ export const lineHeights = {
 export const letterSpacings = {
 {[ for token in tokens ]}
   {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context context.value.letterSpacing /]}',
+  {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.letterSpacing /]}',
 
 {[/]}
 }
