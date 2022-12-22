@@ -1,19 +1,22 @@
-{[ const types = ["color","border","gradient","measure","shadow","radius"] /]}
+{[ const types = ["color","border","shadow","radius"] /]}
 
 {[ for type in types ]}
 {[ const behavior = getBehavior(type) /]}
 import { {{ behavior.varName }} } from './{{ behavior.fileName }}';
 {[/]}
+import { Measures } from './Measures' 
 import { fonts, fontSizes, fontWeights, lineHeights, letterSpacings } from './typography'
 
 export const theme = {
-    {[ for type in types ]}
-    {[ const behavior = getBehavior(type) /]}
-    {{ behavior.themeProperty }}: {{ behavior.varName }},
-    {[/]}
-    fonts,
-    fontSizes,
-    fontWeights,
-    lineHeights,
-    letterSpacings,
+  {[ for type in types ]}
+  {[ const behavior = getBehavior(type) /]}
+  {{ behavior.themeProperty }}: {{ behavior.varName }},
+  {[/]}
+  sizes: Mesasures,
+  spaces: Measures,
+  fonts,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  letterSpacings,
 };
