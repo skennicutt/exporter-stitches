@@ -48,7 +48,7 @@ const BEHAVIOR = {
   },
   border: {
     fileName: "border-widths", // this should be somehow synced with output.json contents
-    varName: "BorderWidths",
+    varName: "Borders",
     themeProperty: "border-widths",
     tokenPrefix: "",
   },

@@ -33,6 +33,6 @@ Rendered as:
 Xpx solid (rendered-color.pr);
 
 *}
-{[ inject "reference-wrapper" context buildReferenceMeta("BorderWidth", context) ]}
+{[ inject "reference-wrapper" context buildReferenceMeta("Border", context) ]}
 {[ inject "rendered-measure" context context.width /]}
 {[/]}
