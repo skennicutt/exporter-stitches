@@ -16,4 +16,4 @@ export default {
 {[ for token in tokens ]}
   {[ inject "rendered-token-object-val" context token /]},
 {[/]}
-}
+};
