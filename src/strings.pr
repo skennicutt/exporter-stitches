@@ -1,0 +1,14 @@
+{[ global CURRENT_TYPE = "Text" /]}
+
+{[ let brand = ds.currentBrand() /]}
+{[ const groups = ds.tokenGroupsOfType(CURRENT_TYPE, brand.id) /]}
+export default {
+{[ for group in groups ]}
+  {[ let tokens = ds.tokensByGroupId(group.id) /]}
+  {{ group.name }}: {
+  {[ for token in tokens ]}
+  {[ inject "rendered-token-object-val" context token /]},
+  {[/]}
+  },
+{[/]}
+};

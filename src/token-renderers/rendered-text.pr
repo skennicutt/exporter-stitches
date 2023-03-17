@@ -1,0 +1,3 @@
+{[ inject "reference-wrapper" context buildReferenceMeta("Text", context) ]}
+{{ context.text }}
+{[/]}

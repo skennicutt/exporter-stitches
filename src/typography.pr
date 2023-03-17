@@ -9,64 +9,47 @@ and their value rendered using `shadow-color` blueprint
 
 {[ const measureBehavior = getBehavior("measure") /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
-
-import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}';
-
 {[ let brand = ds.currentBrand() /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
 {[ for token in tokens ]}
-{[ inject "rendered-token-var" context token /]}    
-{[/]}
-
-export const {{ behavior.varName }} = {
-{[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
-  {[ inject "rendered-name" context token /]},
+{[ inject "rendered-token-var" context token /]}
 
 {[/]}
-}
-
 
 export const fonts = {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
   {[ inject "rendered-name" context token /]}: '{{ token.value.font.family }}',
-
 {[/]}
-}
+};
 
 export const fontSizes = {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
   {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.fontSize /]}',
-
 {[/]}
-}
+};
 
 export const fontWeights = {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
   {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(token.value.font) }},
-
 {[/]}
-}
+};
 
 export const lineHeights = {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
-  {[ if token.value.lineHeight ]}
+{[ if token.value.lineHeight ]}
   {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.lineHeight /]}',
-  {[/]}
 {[/]}
-}
+{[/]}
+};
 
 export const letterSpacings = {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
   {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.letterSpacing /]}',
-
 {[/]}
-}
+};
 
-
-
+export default {
+{[ for token in tokens ]}
+  {[ inject "rendered-name" context token /]},
+{[/]}
+};

@@ -10,10 +10,8 @@ and their value rendered using `rendered-color` blueprint
 {[ let brand = ds.currentBrand() /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
-
-export const {{ behavior.varName }} = {
+export default {
 {[ for token in tokens ]}
-  {[ inject "rendered-token-object-val" context token /]}
-
+  {[ inject "rendered-token-object-val" context token /]},
 {[/]}
-}
+};

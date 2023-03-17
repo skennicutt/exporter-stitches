@@ -11,21 +11,13 @@ and their value rendered using `gradient-color` blueprint
 {[ const measureBehavior = getBehavior("measure") /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
 
-import { {{ colorBehavior.varName }} } from './{{ colorBehavior.fileName }}';
-import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}';
-
-
 {[ let brand = ds.currentBrand() /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
 {[ for token in tokens ]}
 {[ inject "rendered-token-var" context token /]}    
 {[/]}
-
-
-export const {{ behavior.varName }} = {
+export default {
 {[ for token in tokens ]}
-  {[ inject "rendered-description" context token /]}
-{[ inject "rendered-name" context token /]}
-
+  {[ inject "rendered-token-object-val" context token /]},
 {[/]}
-}
+};

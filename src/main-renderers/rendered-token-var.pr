@@ -23,4 +23,7 @@ Rendered as:
 
 *}
 {[ let token = context /]}
-const {[ inject "rendered-name" context token /]} = {[ inject "rendered-value" context token /]};
+const {[ inject "rendered-name" context token /]} = {
+{[ inject "rendered-value" context token /]}
+};
+

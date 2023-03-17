@@ -25,12 +25,12 @@
             "write_to": "radii.ts"
         },
         {
-            "invoke": "typography.pr",
-            "write_to": "typography.ts"
+            "invoke": "strings.pr",
+            "write_to": "strings.ts"
         },
         {
-            "invoke": "theme.pr",
-            "write_to": "theme.ts"
+            "invoke": "typography.pr",
+            "write_to": "typography.ts"
         }
     ]
 }

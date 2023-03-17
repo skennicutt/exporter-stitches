@@ -60,11 +60,10 @@ Rendered as:
 
 *}
 {[ inject "reference-wrapper" context buildReferenceMeta("Typography", context) ]}
-{
-  {[ let fontStyle = "normal" /]}
-  {[ if ds.isFontItalic(context.font) ]}
-    {[ set fontStyle = "italic" /]}
-  {[/]}
+{[ let fontStyle = "normal" /]}
+{[ if ds.isFontItalic(context.font) ]}
+  {[ set fontStyle = "italic" /]}
+{[/]}
   fontFamily: '{{ context.font.family }}',
   fontStyle: '{{ fontStyle }}',
   fontWeight: {{ ds.fontWeight(context.font) }},
@@ -74,4 +73,4 @@ Rendered as:
   {[/]}
   letterSpacing: '{[ inject "rendered-measure" context context.letterSpacing /]}',
   textIndent: '{[ inject "rendered-measure" context context.paragraphIndent /]}',
-}{[/]}
+{[/]}

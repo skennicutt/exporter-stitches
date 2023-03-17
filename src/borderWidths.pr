@@ -9,16 +9,10 @@ and their value rendered using `rendered-border` blueprint
 {[ const colorBehavior = getBehavior("color") /]}
 {[ const measureBehavior = getBehavior("measure") /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
-
-import { {{ colorBehavior.varName }} } from './{{ colorBehavior.fileName }}';
-import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}';
-
 {[ let brand = ds.currentBrand() /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
-
-export const {{ behavior.varName }} = {
+export default {
 {[ for token in tokens ]}
-  {[ inject "rendered-token-object-val" context token /]}
-
+  {[ inject "rendered-token-object-val" context token /]},
 {[/]}
-}
+};
