@@ -9,9 +9,15 @@ and their value rendered using `rendered-measure` blueprint
 
 {[ let brand = ds.currentBrand() /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
-{[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
-export default {
-{[ for token in tokens ]}
-  {[ inject "rendered-token-object-val" context token /]},
-{[/]}
+{[ const groups = ds.tokenGroupsOfType(CURRENT_TYPE, brand.id) /]}
+
+{[ for group in groups ]}
+export const {{ group.name }} = {
+  {[ let tokens = ds.tokensByGroupId(group.id) /]}
+  {[ for token in tokens ]}
+  {{token.name}}: '{[ inject "rendered-value" context token /]}',
+  {[/]}
 };
+
+
+{[/]}

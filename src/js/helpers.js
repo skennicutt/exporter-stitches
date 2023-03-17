@@ -24,7 +24,7 @@ Pulsar.registerFunction(
       .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 
     // only allow letters, digits, underscore, and dollar sign
-    sentence = sentence.replace(/[^a-zA-Z0-9_$]/g, '_')
+    sentence = sentence.replace(/[^a-zA-Z0-9_\$]/g, '_')
 
     // prepend underscore if it starts with digit 
     if (/^\d/.test(sentence)) {
