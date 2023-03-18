@@ -5,10 +5,6 @@
             "write_to": "colors.ts"
         },
         {
-            "invoke": "borderWidths.pr",
-            "write_to": "borderWidths.ts"
-        },
-        {
             "invoke": "gradients.pr",
             "write_to": "gradients.ts"
         },

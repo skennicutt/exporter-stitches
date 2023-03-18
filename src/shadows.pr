@@ -10,10 +10,18 @@ and their value rendered using `shadow-color` blueprint
 {[ const colorBehavior = getBehavior("color") /]}
 {[ const measureBehavior = getBehavior("measure") /]}
 {[ const behavior = getBehavior(CURRENT_TYPE) /]}
+
+import {{ colorBehavior.varName }} from './{{ colorBehavior.fileName }}';
+{* import { {{ measureBehavior.varName }} } from './{{ measureBehavior.fileName }}'; *}
 {[ let brand = ds.currentBrand() /]}
 {[ const tokens = ds.tokensByType(CURRENT_TYPE, brand.id) /]}
+
 export default {
 {[ for token in tokens ]}
+{[ if token.value.color.referencedToken ]}
+  {[ inject "rendered-token-object-val-with-ref" context token /]},
+{[ else ]}
   {[ inject "rendered-token-object-val" context token /]},
+{[/]}
 {[/]}
 };

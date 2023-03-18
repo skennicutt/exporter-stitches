@@ -101,3 +101,7 @@ Pulsar.registerFunction("buildReferenceMeta", function(tokenType, tokenValue){
     referencedToken: tokenValue.referencedToken
   }
 })
+
+Pulsar.registerFunction("hasReference", function(tokenValue){
+  return tokenValue.referencedToken !== undefined;
+})

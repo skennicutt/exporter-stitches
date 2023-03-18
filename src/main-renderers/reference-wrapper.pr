@@ -25,6 +25,5 @@ Note: Token is passed as `context` property because it is injected
 {[ inject "rendered-name" context context.referencedToken /]}
 {[ else ]}
 {[ const behavior = getBehavior(context.tokenType) /]}
-{{ behavior.varName }}.{[ inject "rendered-name" context context.referencedToken /]}
-{[/]}
+${ {{ behavior.varName }}.{[ inject "rendered-name" context context.referencedToken /]} }{[/]}
 {[/]}
