@@ -26,12 +26,33 @@ export const fontSizes = {
 {[ for token in tokens ]}
   {[ inject "rendered-name" context token /]}: '{[ inject "rendered-measure" context token.value.fontSize /]}',
 {[/]}
+  $sm_4: 'var(--font-size-sm_4, 8px)',
+  $sm_3: 'var(--font-size-sm_3, 10px)',
+  $sm_2: 'var(--font-size-sm_2, 12px)',
+  $sm_1: 'var(--font-size-sm_1, 14px)',
+  $base: 'var(--font-size-base, 16px)',
+  $lg_1: 'var(--font-size-lg_1, 20px)',
+  $lg_2: 'var(--font-size-lg_2, 24px)',
+  $lg_3: 'var(--font-size-lg_3, 32px)',
+  $lg_4: 'var(--font-size-lg_4, 40px)',
+  $lg_5: 'var(--font-size-lg_5, 48px)',
+  $lg_6: 'var(--font-size-lg_6, 60px)',
 };
 
 export const fontWeights = {
 {[ for token in tokens ]}
   {[ inject "rendered-name" context token /]}: {{ ds.fontWeight(token.value.font) }},
 {[/]}
+  light: '300',
+  regular: '400',
+  normal: '450',
+  medium: '500',
+  demibold: '600',
+  bold: '700',
+  extrabold: '800',
+  italic: '400',
+  demiboldItalic: '600',
+  boldItalic: '700',
 };
 
 export const lineHeights = {
